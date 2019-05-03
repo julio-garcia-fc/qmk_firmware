@@ -21,6 +21,11 @@
 #define KC_PC_COPY LCTL(KC_C)
 #define KC_PC_PASTE LCTL(KC_V)
 
+#define HSV_JULIO_BLACK {  0,   0,   0}
+#define HSV_JULIO_GOLD  { 35, 255, 255}
+#define HSV_JULIO_GREEN {105, 255, 255}
+#define HSV_JULIO_RED   {249, 228, 255}
+
 enum custom_keycodes {
   RGB_SLD = SAFE_RANGE, // can always be here
   EPRM,
@@ -101,38 +106,38 @@ void keyboard_post_init_user(void) {
 const uint8_t PROGMEM ledmap[][DRIVER_LED_TOTAL][3] = {
 [SYMB] = {
     // Right hand
-    // 6             7              8              9              0
-    {35,255,255}, {35,255,255},  {35,255,255},  {35,255,255},  {35,255,255},
-    {0,0,0},      {105,255,255}, {105,255,255}, {105,255,255}, {0,0,0},
-    {0,0,0},      {105,255,255}, {105,255,255}, {105,255,255}, {0,0,0},
-    {0,0,0},      {105,255,255}, {105,255,255}, {105,255,255}, {0,0,0},
-                  {0,0,0},       {0,0,0},       {0,0,0},       {0,0,0},
+    // 6                7                8                9                0
+    HSV_JULIO_GOLD,  HSV_JULIO_GOLD,  HSV_JULIO_GOLD,  HSV_JULIO_GOLD,  HSV_JULIO_GOLD,
+    HSV_JULIO_BLACK, HSV_JULIO_GREEN, HSV_JULIO_GREEN, HSV_JULIO_GREEN, HSV_JULIO_BLACK,
+    HSV_JULIO_BLACK, HSV_JULIO_GREEN, HSV_JULIO_GREEN, HSV_JULIO_GREEN, HSV_JULIO_BLACK,
+    HSV_JULIO_BLACK, HSV_JULIO_GREEN, HSV_JULIO_GREEN, HSV_JULIO_GREEN, HSV_JULIO_BLACK,
+                     HSV_JULIO_BLACK, HSV_JULIO_BLACK, HSV_JULIO_BLACK, HSV_JULIO_BLACK,
 
     // Left hand
-    // 5             4             3             2              1
-    {35,255,255}, {35,255,255}, {35,255,255}, {35,255,255}, {35,255,255},
-    {0,0,0},      {0,0,0},      {0,0,0},      {0,0,0},      {0,0,0},
-    {0,0,0},      {0,0,0},      {0,0,0},      {0,0,0},      {0,0,0},
-    {0,0,0},      {0,0,0},      {0,0,0},      {0,0,0},      {0,0,0},
-                  {0,0,0},      {0,0,0},      {0,0,0},      {0,0,0}
+    // 5                4                3                2                1
+    HSV_JULIO_GOLD,  HSV_JULIO_GOLD,  HSV_JULIO_GOLD,  HSV_JULIO_GOLD,  HSV_JULIO_GOLD,
+    HSV_JULIO_BLACK, HSV_JULIO_BLACK, HSV_JULIO_BLACK, HSV_JULIO_BLACK, HSV_JULIO_BLACK,
+    HSV_JULIO_BLACK, HSV_JULIO_BLACK, HSV_JULIO_BLACK, HSV_JULIO_BLACK, HSV_JULIO_BLACK,
+    HSV_JULIO_BLACK, HSV_JULIO_BLACK, HSV_JULIO_BLACK, HSV_JULIO_BLACK, HSV_JULIO_BLACK,
+                     HSV_JULIO_BLACK, HSV_JULIO_BLACK, HSV_JULIO_BLACK, HSV_JULIO_BLACK
 },
 
 [MDIA] = {
     // Right hand
-    // 6             7              8              9              0
-    {0,0,0}, {0,0,0},       {0,0,0},       {0,0,0},       {0,0,0},
-    {0,0,0}, {0,0,0},       {0,0,0},       {0,0,0},       {0,0,0},
-    {0,0,0}, {0,0,0},       {0,0,0},       {0,0,0},       {0,0,0},
-    {0,0,0}, {0,0,0},       {249,228,255}, {249,228,255}, {0,0,0},
-             {249,228,255}, {249,228,255}, {249,228,255}, {0,0,0},
+    // 6                7                8                9                0
+    HSV_JULIO_BLACK, HSV_JULIO_BLACK, HSV_JULIO_BLACK, HSV_JULIO_BLACK, HSV_JULIO_BLACK,
+    HSV_JULIO_BLACK, HSV_JULIO_BLACK, HSV_JULIO_BLACK, HSV_JULIO_BLACK, HSV_JULIO_BLACK,
+    HSV_JULIO_BLACK, HSV_JULIO_BLACK, HSV_JULIO_BLACK, HSV_JULIO_BLACK, HSV_JULIO_BLACK,
+    HSV_JULIO_BLACK, HSV_JULIO_BLACK, HSV_JULIO_RED,   HSV_JULIO_RED,   HSV_JULIO_BLACK,
+                     HSV_JULIO_RED,   HSV_JULIO_RED,   HSV_JULIO_RED,   HSV_JULIO_BLACK,
 
     // Left hand
-    // 5             4             3             2              1
-    {0,0,0},       {0,0,0},       {0,0,0},       {0,0,0},       {0,0,0},
-    {0,0,0},       {0,0,0},       {249,228,255}, {0,0,0},       {0,0,0},
-    {0,0,0},       {249,228,255}, {249,228,255}, {249,228,255}, {0,0,0},
-    {0,0,0},       {0,0,0},       {0,0,0},       {0,0,0},       {0,0,0},
-                   {249,228,255}, {249,228,255}, {0,0,0},       {0,0,0}
+    // 5                4                3                2                1
+    HSV_JULIO_BLACK, HSV_JULIO_BLACK, HSV_JULIO_BLACK, HSV_JULIO_BLACK, HSV_JULIO_BLACK,
+    HSV_JULIO_BLACK, HSV_JULIO_BLACK, HSV_JULIO_RED,   HSV_JULIO_BLACK, HSV_JULIO_BLACK,
+    HSV_JULIO_BLACK, HSV_JULIO_RED,   HSV_JULIO_RED,   HSV_JULIO_RED,   HSV_JULIO_BLACK,
+    HSV_JULIO_BLACK, HSV_JULIO_BLACK, HSV_JULIO_BLACK, HSV_JULIO_BLACK, HSV_JULIO_BLACK,
+                     HSV_JULIO_RED,   HSV_JULIO_RED,   HSV_JULIO_BLACK, HSV_JULIO_BLACK
 },
 
 };
