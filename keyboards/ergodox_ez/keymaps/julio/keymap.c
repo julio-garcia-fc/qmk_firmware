@@ -34,11 +34,11 @@ enum custom_keycodes {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [BASE] = LAYOUT_ergodox(
-        KC_EQL,         KC_1,        KC_2,         KC_3,      KC_4,   KC_5,KC_ESC,
-        KC_TAB,         KC_Q,        KC_W,         KC_E,      KC_R,   KC_T,TG(SYMB),
-        LALT_T(KC_APP), KC_A,        KC_S,         KC_D,      KC_F,   KC_G,
-        KC_LSFT,        LCTL_T(KC_Z),KC_X,         KC_C,      KC_V,   KC_B,KC_SPC,
-        LT(SYMB,KC_GRV),KC_QUOT,     LALT(KC_LSFT),KC_LEFT,   KC_RGHT,
+        KC_EQL,          KC_1,        KC_2,         KC_3,      KC_4,   KC_5,KC_ESC,
+        KC_TAB,          KC_Q,        KC_W,         KC_E,      KC_R,   KC_T,TG(SYMB),
+        LALT_T(KC_APP),  KC_A,        KC_S,         KC_D,      KC_F,   KC_G,
+        LSFT_T(KC_ENTER),LCTL_T(KC_Z),KC_X,         KC_C,      KC_V,   KC_B,KC_SPC,
+        LT(SYMB,KC_GRV), KC_QUOT,     LALT(KC_LSFT),KC_LEFT,   KC_RGHT,
                                                                                    KC_LCMD,KC_LALT,
                                                                                            KC_HOME,
                                                                             KC_SPC,KC_ENT, KC_END,
@@ -46,7 +46,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
             KC_RGHT, KC_6,KC_7, KC_8,   KC_9,   KC_0,            KC_MINS,
             TG(SYMB),KC_Y,KC_U, KC_I,   KC_O,   KC_P,            KC_BSLS,
                      KC_H,KC_J, KC_K,   KC_L,   LT(MDIA,KC_SCLN),RALT_T(KC_QUOT),
-            KC_ENTER,KC_N,KC_M, KC_COMM,KC_DOT, RCTL_T(KC_SLSH), KC_RSFT,
+            KC_ENTER,KC_N,KC_M, KC_COMM,KC_DOT, RCTL_T(KC_SLSH), RSFT_T(KC_ENTER),
                           KC_UP,KC_DOWN,KC_LBRC,KC_RBRC,         MO(SYMB),
         KC_RALT,KC_RCMD,
         KC_PGUP,
