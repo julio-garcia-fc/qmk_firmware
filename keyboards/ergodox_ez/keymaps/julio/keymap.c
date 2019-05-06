@@ -10,8 +10,6 @@
 #define SYMB 1
 #define MDIA 2
 
-#define _______ KC_TRNS
-
 #define KC_MAC_UNDO LGUI(KC_Z)
 #define KC_MAC_CUT LGUI(KC_X)
 #define KC_MAC_COPY LGUI(KC_C)
@@ -46,7 +44,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
             KC_RGHT, KC_6,KC_7, KC_8,   KC_9,   KC_0,            KC_MINS,
             TG(SYMB),KC_Y,KC_U, KC_I,   KC_O,   KC_P,            KC_BSLS,
                      KC_H,KC_J, KC_K,   KC_L,   LT(MDIA,KC_SCLN),RALT_T(KC_QUOT),
-            KC_ENTER,KC_N,KC_M, KC_COMM,KC_DOT, RCTL_T(KC_SLSH), RSFT_T(KC_ENTER),
+            KC_SPC  ,KC_N,KC_M, KC_COMM,KC_DOT, RCTL_T(KC_SLSH), RSFT_T(KC_ENTER),
                           KC_UP,KC_DOWN,KC_LBRC,KC_RBRC,         MO(SYMB),
         KC_RALT,KC_RCMD,
         KC_PGUP,
